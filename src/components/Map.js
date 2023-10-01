@@ -4,10 +4,9 @@ import Mapbox from "@rnmapbox/maps";
 import { useSelector } from "react-redux";
 import { Camera } from "@rnmapbox/maps";
 import { useEffect, useRef } from "react";
+import {MAP_BOX_KEY} from '@env'
 
-Mapbox.setAccessToken(
-  "pk.eyJ1Ijoic2FhZHNvaGFpbGJhandhIiwiYSI6ImNsbjRzYjF6czA1M24ydG1uOGx4NzYyZjEifQ.wOdttrzMPNf9pN0lZLLpDA"
-);
+Mapbox.setAccessToken(MAP_BOX_KEY);
 
 const Map = () => {
   const origin = useSelector((state) => state.nav.origin);
