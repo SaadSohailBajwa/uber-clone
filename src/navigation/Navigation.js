@@ -9,6 +9,7 @@ import Register from "../screens/Register";
 import Home from "../screens/Home";
 import BookRide from "../screens/BookRide";
 import Destination from "../screens/Destination";
+import Driver from "../screens/Driver";
 
 
 const Navigation = ()=>{
@@ -24,7 +25,8 @@ const Navigation = ()=>{
           <Stack.Screen name="BookRide" component={BookRide} options={{
             headerShown:false
           }}/>
-          <Stack.Screen name="Destination" component={Destination}/>
+          <Stack.Screen name="Destination" component={Destination} options={{headerShown:false}}/>
+          <Stack.Screen name="Driver" component={Driver} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -2,8 +2,11 @@
 import react from "react";
 import { View, Text, Button, TextInput,StatusBar } from "react-native";
 import AddressAutocomplete from "../utilities/AddressAutocomplete";
+import { useSelector } from "react-redux";
+import { selectOrigin } from "../../slices/navSlice";
 
 const BookRide = ({ navigation }) => {
+  const origin = useSelector(selectOrigin)
   return (
     <View>
       <StatusBar backgroundColor={"lightgrey"} />
@@ -13,7 +16,10 @@ const BookRide = ({ navigation }) => {
       <Button
         title="select destination"
         onPress={() => {
-          navigation.navigate("Destination");
+          if(origin){
+            navigation.navigate("Destination");
+          }
+          
         }}
       />
     </View>

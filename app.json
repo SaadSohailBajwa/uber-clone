@@ -21,10 +21,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.saadsohailbajwa.client"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1Ijoic2FhZHNvaGFpbGJhandhIiwiYSI6ImNsbjdqMXFtNDB0YTQya3Q3cmZpdHUzajEifQ.Juj_yfUmj77z3XsJ8SfkKQ"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ea4f08bd-e9c2-418a-a2e1-40357cae7c5f"
+      }
     }
   }
 }

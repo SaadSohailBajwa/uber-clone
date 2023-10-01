@@ -15,7 +15,7 @@ const Intro = ({ navigation }) => {
       <Button
         title="Drive"
         onPress={() => {
-          navigation.navigate("Register");
+          navigation.navigate("Driver");
         }}
       />
     </View>
